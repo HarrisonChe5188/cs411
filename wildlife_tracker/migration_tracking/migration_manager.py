@@ -35,5 +35,4 @@ class MigrationManager:
     def get_migrations_by_status(self, status: str) -> List[Migration]:
         pass
 
-    def update_migration_details(self, migration_id: int, **kwargs: Any) -> None:
-        pass
+

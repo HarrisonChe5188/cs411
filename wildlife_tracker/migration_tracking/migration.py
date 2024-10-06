@@ -15,11 +15,8 @@ class Migration:
         self.current_location = current_location
         self.status = status
 
-    def get_migration_details(self) -> dict[str, str]:
+    def update_migration_details(self, migration_id: int, **kwargs: Any) -> None:
         pass
 
-    def update_migration_details(self, **kwargs: Optional[str]) -> None:
-        pass
-        
-    def get_migration_path(self) -> MigrationPath:
+    def get_migration_path_details(path_id) -> dict:
         pass
