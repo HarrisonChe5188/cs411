@@ -19,7 +19,7 @@ from meal_max.models.kitchen_model import (
 #    Fixtures
 #
 ######################################################
-
+@pytest.fixture
 def normalize_whitespace(sql_query: str) -> str:
     return re.sub(r'\s+', ' ', sql_query).strip()
 
