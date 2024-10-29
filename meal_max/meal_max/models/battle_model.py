@@ -11,7 +11,13 @@ configure_logger(logger)
 
 
 class BattleModel:
+    """
+    A class to manage battles between meals
 
+    Attributes:
+        combatants (List[Meal]): The list of meals prepped to enter the Thunderdiner
+    
+    """
     def __init__(self):
         self.combatants: List[Meal] = []
 
