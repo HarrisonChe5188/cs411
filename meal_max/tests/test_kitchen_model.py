@@ -78,6 +78,10 @@ def test_delete_meal_already_deleted(self, mock_db):
         """Stub for testing delete_meal function on a meal that's already been deleted."""
         assert True
 
+def test_clear_catalog(mock_cursor, mocker):
+       """Stub for testing clear_meal function on a meal that's already been deleted."""
+        assert True
+
 ######################################################
 #
 #    Get
