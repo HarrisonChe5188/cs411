@@ -7,6 +7,7 @@ import pytest
 from meal_max.models.kitchen_model import (
     Meal,
     create_meal,
+    clear_meals,
     delete_meal,
     get_leaderboard,
     get_meal_by_id,
@@ -66,6 +67,10 @@ def test_create_meal_invalid_difficulty(self, mock_db):
         """Stub for testing create_meal function when meal has invalid difficulty."""
         assert True
 
+def test_clear_catalog(mock_cursor, mocker):
+        """Stub for testing clear_meal function on a meal that's already been deleted."""
+        assert True
+
 def test_delete_meal(self, mock_db):
         """Stub for testing delete_meal function."""
         assert True
@@ -78,9 +83,6 @@ def test_delete_meal_already_deleted(self, mock_db):
         """Stub for testing delete_meal function on a meal that's already been deleted."""
         assert True
 
-def test_clear_catalog(mock_cursor, mocker):
-        """Stub for testing clear_meal function on a meal that's already been deleted."""
-        assert True
 
 ######################################################
 #
