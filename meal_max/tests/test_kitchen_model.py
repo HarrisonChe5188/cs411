@@ -51,19 +51,19 @@ def mock_cursor(mocker):
 #
 ######################################################
 
-def test_create_meal(self, mock_db):
+def test_create_meal(mock_cursor):
         """Stub for testing create_meal function."""
         assert True
 
-def test_create_meal_duplicate(self, mock_db):
+def test_create_meal_duplicate(mock_cursor):
         """Stub for testing create_meal function when meal already exists."""
         assert True
 
-def test_create_meal_invalid_price(self, mock_db):
+def test_create_meal_invalid_price():
         """Stub for testing create_meal function when meal has negative price."""
         assert True
 
-def test_create_meal_invalid_difficulty(self, mock_db):
+def test_create_meal_invalid_difficulty():
         """Stub for testing create_meal function when meal has invalid difficulty."""
         assert True
 
@@ -71,15 +71,15 @@ def test_clear_catalog(mock_cursor, mocker):
         """Stub for testing clear_meal function on a meal that's already been deleted."""
         assert True
 
-def test_delete_meal(self, mock_db):
+def test_delete_meal(mock_cursor):
         """Stub for testing delete_meal function."""
         assert True
 
-def test_delete_meal_bad_id(self, mock_db):
+def test_delete_meal_bad_id(mock_cursor):
         """Stub for testing delete_meal function on a non-existent meal."""
         assert True
 
-def test_delete_meal_already_deleted(self, mock_db):
+def test_delete_meal_already_deleted(mock_cursor):
         """Stub for testing delete_meal function on a meal that's already been deleted."""
         assert True
 
@@ -90,35 +90,35 @@ def test_delete_meal_already_deleted(self, mock_db):
 #
 ######################################################
 
-def test_get_leaderboard(self, mock_db):
+def test_get_leaderboard(mock_cursor):
         """Stub for testing get_leaderboard function."""
         assert True
 
-def test_get_leaderboard_bad_param(self, mock_db):
+def test_get_leaderboard_bad_param(mock_cursor):
         """Stub for testing get_leaderboard function when the input is invalid."""
         assert True
 
-def test_get_meal_by_id(self, mock_db):
+def test_get_meal_by_id(mock_cursor):
         """Stub for testing get_meal_by_id function."""
         assert True
 
-def test_get_meal_by_id_bad_id(self, mock_db):
+def test_get_meal_by_id_bad_id(mock_cursor):
         """Stub for testing get_meal_by_id function on a non-existent meal."""
         assert True
         
-def test_get_meal_by_id_already_deleted_id(self, mock_db):
+def test_get_meal_by_id_already_deleted_id(mock_cursor):
         """Stub for testing get_meal_by_id function on a meal that's been deleted."""
         assert True
 
-def test_get_meal_by_name(self, mock_db):
+def test_get_meal_by_name(mock_cursor):
         """Stub for testing get_meal_by_name function."""
         assert True
 
-def test_get_meal_by_name_bad_name(self, mock_db):
+def test_get_meal_by_name_bad_name(mock_cursor):
         """Stub for testing get_meal_by_name function on a non-existent meal."""
         assert True
 
-def test_get_meal_by_name_already_deleted_name(self, mock_db):
+def test_get_meal_by_name_already_deleted_name(mock_cursor):
         """Stub for testing get_meal_by_name function a meal that's already been deleted."""
         assert True
 
@@ -128,18 +128,18 @@ def test_get_meal_by_name_already_deleted_name(self, mock_db):
 #
 ######################################################
 
-def test_update_meal_stats(self, mock_db):
+def test_update_meal_stats(mock_cursor):
         """Stub for testing update_meal_stats function."""
         assert True
 
-def test_update_meal_stats_bad_id(self, mock_db):
+def test_update_meal_stats_bad_id(mock_cursor):
         """Stub for testing update_meal_stats function on a meal that does not exist."""
         assert True
 
-def test_update_meal_stats_deleted_id(self, mock_db):
+def test_update_meal_stats_deleted_id(mock_cursor):
         """Stub for testing update_meal_stats function on a meal that's already been deleted."""
         assert True
 
-def test_update_meal_stats_invalid_result(self, mock_db):
+def test_update_meal_stats_invalid_result(mock_cursor):
         """Stub for testing update_meal_stats function when the result is not a win or a loss."""
         assert True
