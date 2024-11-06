@@ -11,7 +11,7 @@ while [ "$#" -gt 0 ]; do
   shift
 done
 
-#Check health status
+#Check health of the service
 check_health() {
   echo "Checking health status..."
   curl -s -X GET "$BASE_URL/health" | grep -q '"status": "healthy"'
@@ -33,3 +33,10 @@ check_db() {
   fi
 }
 
+
+
+
+
+# Health checks
+check_health
+check_db

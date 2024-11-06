@@ -26,7 +26,9 @@ def sample_combatants(sample_meal1, sample_meal2):
 ##################################################
 
 def test_battle(battle_model):
-
+    """
+    Test the battale model.
+    """
 
 
 
