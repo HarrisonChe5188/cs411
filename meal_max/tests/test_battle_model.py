@@ -1,4 +1,7 @@
 import pytest
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 from meal_max.models.battle_model import BattleModel
 from meal_max.models.kitchen_model import Meal
 
@@ -10,11 +13,11 @@ def battle_model():
 """Fixtures providing sample meal combatants for the tests."""
 @pytest.fixture
 def sample_meal1():
-    return Meal(1, 'Food 1', 'Cuisine 1', 2022, 20.0, "HIGH")
+    return Meal(1, 'Food 1', 'Cuisine 1', 20.0, "HIGH")
 
 @pytest.fixture
 def sample_meal2():
-    return Meal(2, 'Food 2', 'Cuisine 2', 2021, 5.0, "LOW")
+    return Meal(2, 'Food 2', 'Cuisine 2', 5.0, "LOW")
 
 @pytest.fixture
 def sample_combatants(sample_meal1, sample_meal2):
@@ -35,8 +38,8 @@ def test_battle_with_two_combatants(battle_model, sample_combatants):
 
 def test_battle_randomly_determined_winner(battle_model):
     """Test that battle can result in either combatant winning in a close battle scenario."""
-    meal1 = Meal(1, 'Spicy Curry', 'Indian', 2022, 15.0, "MED")
-    meal2 = Meal(2, 'Pasta', 'Italian', 2021, 15.0, "MED")
+    meal1 = Meal(1, 'Spicy Curry', 'Indian', 15.0, "MED")
+    meal2 = Meal(2, 'Pasta', 'Italian', 15.0, "MED")
     battle_model.combatants = [meal1, meal2]
     
     # Conduct multiple battles to see variation in winners
